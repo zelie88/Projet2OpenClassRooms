@@ -1,0 +1,425 @@
+/*
+Theme Name:     Wisdom Blog Child
+Description:    Theme enfant de Wisdom Blog
+Author:         Zélie A.
+Author URI:     https://www.wpserveur.net
+Template:       wisdom-blog                      
+Version:        0.1.0
+*/
+
+	/*Page d'accueil*/
+#colophon
+{
+	margin-top: 0px;
+}
+
+#cv-scrollup
+{
+	bottom: 100px;
+}
+
+.wp-block-media-text:hover
+{
+	animation: animation 2s;
+	-webkit-animation: animation 2s;
+}
+
+.wp-block-preformatted
+{
+	width: 100%;
+	font-family: inherit;
+	background: none;
+}
+
+h1
+{	
+	font-family: "Pacifico"
+}
+
+h2 a
+{	color: #000;
+	font-family: "Pacifico";
+}
+
+h2 a:hover
+{
+	color: #000;
+}
+
+h2.banner-title
+{
+	font-family:"Pacifico";
+	font-size: 38px;
+}
+
+#secondary .widget .widget-title
+{
+	font-family: "Pacifico";
+}
+
+	/*Plus d'infos*/
+.entry-content:before
+{
+	content:none;
+}	
+
+#post-14 div.entry-content
+{
+	display: grid;
+	grid-template-rows: 30px auto auto auto auto auto;
+	grid-column-gap: 15px;
+	grid-template-columns: 33% 33% 33%;
+	grid-auto-flow: column;
+	justify-content: center;
+}
+
+#post-14 img
+{
+	height: 210px;
+	width: 390px;
+	object-fit: cover;
+	padding-left: 30px;
+}
+
+a:nth-of-type(3)
+{
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.em-pagination
+{
+	display: flex;
+	position: absolute;
+	bottom: 1%;
+	right: 10%;
+	width: 50px;
+	justify-content: space-around;
+}
+
+	/*Activités du mois*/
+table.events-table
+{
+	width: 100%;
+	table-layout: fixed;
+}
+
+.css-events-list table.events-table td
+{
+	padding: 0 10px 10px 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.css-events-list table.events-table p
+{
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.css-events-list table tr td:first-child + td + td
+{
+	padding-bottom: 0;
+	padding-top: 15px;
+}
+
+thead tr th
+{
+	text-align: center;
+}
+
+tbody tr td
+{
+	line-height: 1.0;
+	vertical-align: middle;
+}
+
+tbody p
+{
+	margin-bottom: 0;
+}
+
+tbody tr td
+{
+	text-align: center;
+}
+
+tbody tr:hover
+{
+	background-color: #DBE5ED;
+}
+
+tbody tr a
+{
+	color: #6FBFCC;
+}
+
+.css-events-list table.events-table th.event-time
+{
+	width: 20%;
+}
+
+.css-events-list table.events-table th.event-name
+{
+	width: 15%;
+}
+
+.css-events-list table.events-table th.event-description
+{
+	width: 50%;
+}
+
+.css-events-list table.events-table th.event-booking
+{
+	width: 15%;
+}
+
+button.popmake-inscription.pum-trigger
+{
+	color: #000;
+	border-radius: 30px;
+	background-color: #6FBFCC;
+	opacity: 0.4;
+	margin-bottom: 1px;
+}
+
+	/*Contact*/
+
+form.wpcf7-form
+{
+	width: 50%;
+}
+
+#wpcf7-f8-p18-o1.wpcf7
+{
+	display: flex;
+	justify-content: center;
+}
+
+input.wpcf7-form-control.wpcf7-submit
+{
+	border-radius: 30px;
+}
+
+input.wpcf7-form-control.wpcf7-text, textarea.wpcf7-form-control.wpcf7-textarea, select.wpcf7-form-control.wpcf7-select, input.wpcf7-form-control.wpcf7-date.wpcf7-validates-as-date
+{
+	border-radius: 20px;
+	border-style: solid;
+}
+
+div.wpcf7-mail-sent-ok, div.wpcf7-validation-errors, div.wpcf7-acceptance-missing
+{
+	border: 1px solid #8AE4C8;
+	border-radius: 20px;
+}
+
+.pum-form--style-default input[type="text"], .pum-form--style-default input[type="email"]
+{
+	border-radius: 20px;
+}
+
+.pum-form--style-default button
+{
+	margin: auto !important;
+	width: 33% !important;
+	border-radius: 30px;
+	font-family: "Comic Sans MS";
+	font-size: 14px !important;
+}
+	/*Animation page d'accueil*/
+@keyframes animation
+{
+	0% {transform: scale(1);}	
+	50% {transform: scale(1.2);}
+	100% {transform: scale(1);}	
+}
+
+@-webkit-keyframes animation
+{
+	0% {transform: scale(1);}	
+	50% {transform: scale(1.2);}
+	100% {transform: scale(1);}
+}
+
+	/*Media Querries*/
+/*Ordinateur*/
+@media all and (max-width: 1024px)
+{
+	#cv-scrollup
+	{
+		right: 10px;
+	}
+	article#post-9
+		{
+			padding-left:50px;
+		}
+	#post-14 div.entry-content
+ 		{
+ 			grid-template-columns: 50% 50%;
+ 			grid-template-rows: 30px auto auto auto auto auto auto auto auto;
+			margin:5%;
+		}
+	a:nth-of-type(3)
+		{
+			grid-column: 1;
+			grid-row: 7;
+		}
+	#post-14 img
+	{
+		padding-left: 30px;
+	}	
+	th.event-description
+		{
+			width:25%;
+		}
+	button.popmake-inscription
+		{
+			padding: 10px;
+		}
+	#popmake-212
+		{
+			width:60%;
+		}
+	.pum-form--style-default button
+		{
+			width: 50% !important;
+		}
+	aside#secondary.widget-area
+		{
+			padding-right: 3%;
+		}
+}
+
+/*Format tablette*/
+@media all and (max-width:768px)
+{
+	.site-title
+	{
+		padding-left: 10px;
+		text-align:center;
+	}
+	p.site-description
+	{
+		text-align:center;
+		margin-bottom:0;
+	}
+	#post-14 img
+	{
+		padding-left: 0;
+	}	
+	button.popmake-inscription
+	{
+		padding: 10px 5px;
+	}
+	form.wpcf7-form
+	{
+		width: 80%;
+	}
+	#popmake-212.pum-container
+	{
+		width:90%;
+	}
+	table, tbody, td, tr
+	{ 
+		display: block; 
+	}
+	thead
+	{ 
+		display: none;
+	}
+	tbody
+	{
+		margin-top:-70px;
+	}
+	tr
+	{
+		border: 1px solid #ccc;
+		margin-bottom: 15px;
+	}
+	td
+	{
+    	border: none;
+    	padding-left: 50%;
+    	white-space: normal;
+    	text-align: left;
+    	padding: 0;
+    }
+	.css-events-list table.events-table td
+	{
+		padding: 0;
+	}
+  	/* Pour remettre les titres des colonnes dans les cartes d'activités
+  	td:before
+  	{
+		padding-right: 10px; 
+		white-space: nowrap;
+		text-align:left;
+		font-weight: bold;
+	} 
+	td:nth-of-type(1):before { content: "Date"; }
+	td:nth-of-type(2):before { content: "Titre"; }
+	td:nth-of-type(3):before { content: ""; }
+	td:nth-of-type(4):before { content: "";}
+	}*/
+	.css-events-list table tr td:first-child + td + td
+	{
+		padding: 0;	
+	}
+	button.popmake-inscription
+	{
+		padding: 15px;
+	}
+}
+
+/*Format smartphone*/
+@media all and (max-width:480px)
+{
+	h2.banner-title
+	{
+		font-size: 18px;
+	}
+	.site-branding
+	{
+		margin: 3%;
+		text-align: center !important;
+	}
+	h2
+	{
+		margin-top: 5%;
+		font-size: 26px;
+	}
+	article#post-9
+	{
+		padding:0 20px;
+	}
+	aside#secondary.widget-area
+	{
+		padding: 0 20px;
+	}
+	.wp-block-media-text_media
+	{
+		width: 80%;
+	}
+	.wp-block-spacer
+	{
+		display: none;
+	}
+	#post-14 div.entry-content
+	{
+		display: block;
+	}
+	#post-14 img
+	{
+		padding-left: 0;
+	}
+	.em-pagination
+	{
+		position: relative;
+		bottom: 0;
+		right: 0;
+	}
+	form.wpcf7-form
+	{
+		width: 100%;
+	}
+}
